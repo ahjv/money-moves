@@ -1,0 +1,63 @@
+/* fullscreen shell */
+.game-shell {
+  position: fixed;
+  inset: 0;
+  background: #eaf2ff;
+  display: grid;
+  place-items: center;
+}
+
+/* the canvas sits in this box and scales with FIT */
+.canvas-wrap {
+  position: relative;
+  width: min(1100px, 95vw);
+  height: min(680px, 92vh);
+  box-shadow: 0 18px 50px rgba(16,42,112,.18);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #7fb36f;
+  border: 2px solid #1f3a93;
+}
+
+/* overlay HUD */
+.hud-overlay {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  display: grid;
+  gap: 8px;
+  z-index: 20;
+}
+
+.hud-card {
+  background: rgba(255,255,255,.9);
+  border: 2px solid #1f3a93;
+  border-radius: 10px;
+  padding: 8px 10px;
+  backdrop-filter: blur(2px);
+}
+
+.hud-row { display: grid; grid-auto-flow: column; gap: 14px; align-items: center; }
+
+/* scenario card when it pops */
+.scenario-card {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  width: min(780px, 92vw);
+  background: #fff;
+  border: 2px solid #1f3a93;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.25);
+  padding: 16px;
+  z-index: 30;
+}
+
+.scenario-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.scenario-pill { font-size: .9rem; background: #e7efff; padding: 4px 10px; border-radius: 999px; border:1px solid #b7c6ff; }
+.choices { display: grid; gap: 10px; }
+.choices button { background:#1f3a93; color:#fff; border:none; border-radius:8px; padding:10px 12px; cursor:pointer; }
+.choices button:hover { filter: brightness(1.05); }
+
+.footer-actions { display:none; } /* hide the old restart at bottom page; we'll keep summary's button */

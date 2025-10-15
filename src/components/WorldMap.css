@@ -1,0 +1,50 @@
+.map-wrap {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  margin: 12px 0 8px;
+}
+
+.map-grid {
+  display: grid;
+  background: #cfe3ff;
+  border: 2px solid #1f3a93;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background: #e7efff;
+  border: 1px solid #d4dcf1;
+  position: relative;
+}
+
+.player {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.avatar-mini svg {
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
+}
+
+.poi {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+  font-size: 16px;
+  color: #eab308;
+  text-shadow: 0 1px 0 #fff;
+}
+.poi-done { color: #9ca3af; }
+
+.map-help {
+  font-size: 0.9rem;
+  color: #2e3e4e;
+}

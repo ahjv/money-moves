@@ -1,0 +1,5 @@
+.dialog-backdrop { position: fixed; inset: 0; display:grid; place-items:end center; background: rgba(0,0,0,.15); }
+.dialog-card { width:min(720px,92vw); margin:16px; padding:14px 16px; border-radius:12px; background:#fff; border:2px solid #1f3a93; box-shadow:0 10px 30px rgba(0,0,0,.2); color:#17315f; }
+.dialog-actions { display:flex; justify-content:flex-end; margin-top:8px; }
+.dialog-actions button { background:#1f3a93; color:#fff; border:none; border-radius:8px; padding:8px 12px; cursor:pointer; }
+.dialog-actions button:hover { filter:brightness(1.05); }

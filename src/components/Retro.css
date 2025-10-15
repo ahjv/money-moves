@@ -1,0 +1,85 @@
+/* Retro frame + CRT vibe */
+.retro-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(1200px 600px at 50% 20%, #cfe3ff, #b7cffb 30%, #96b2f5 70%, #7e9aea);
+}
+
+.crt-frame {
+  width: min(800px, 92vw);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25), inset 0 0 0 2px #1f3a93;
+  padding: 28px;
+}
+
+/* Title + buttons */
+.retro-title {
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1f3a93;
+  margin: 4px 0 10px;
+}
+.retro-title.sm { font-size: 1.6rem; }
+.retro-sub { text-align: center; color: #2e3e4e; margin-bottom: 18px; }
+
+.retro-btn {
+  font-family: inherit;
+  border: 2px solid #1f3a93;
+  background: #e7efff;
+  color: #1f3a93;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.retro-btn:hover { background: #d7e6ff; }
+.retro-btn.primary { background: #1f3a93; color: #fff; border-color: #1f3a93; }
+.retro-btn.primary:hover { filter: brightness(1.05); }
+.retro-btn.ghost { background: transparent; }
+.retro-btn.xs { padding: 6px 10px; font-size: .9rem; }
+
+/* Creator layout */
+.creator-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 18px;
+}
+.creator-left { display: grid; gap: 12px; justify-items: center; }
+.creator-right section { margin-bottom: 12px; }
+.name-input { width: 100%; }
+.retro-input {
+  width: 100%;
+  border: 2px solid #1f3a93;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.swatch-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.swatch {
+  width: 28px; height: 28px; border-radius: 6px; border: 2px solid #1f3a93;
+  cursor: pointer;
+}
+.swatch-active { outline: 3px solid #1f3a93; }
+
+.chip-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  border: 1px solid #1f3a93; border-radius: 999px; padding: 6px 10px;
+  background: #eef3ff; color: #1f3a93; cursor: pointer;
+}
+.chip-active { background: #1f3a93; color: #fff; }
+
+/* HUD */
+.hud {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.hud-player { display: flex; align-items: center; gap: 8px; justify-self: center; }
+.hud-avatar-small svg { width: 48px; height: 48px; image-rendering: pixelated; }
+.hud-name { font-weight: 700; color: #1f3a93; }
+.hud-right { justify-self: end; }
